@@ -54,16 +54,31 @@ PREDICTIONS_FILE = os.environ.get(
 )
 
 
+_SEED_PREDICTIONS_FILE = os.path.join(os.path.dirname(__file__), "predictions.json")
+
+
 def _ensure_predictions_file():
     """
     Creates the predictions storage directory/file if missing.
+
+    On first run with a fresh Volume, seeds it from the predictions.json
+    bundled in the repo so existing predictions aren't lost when the
+    storage path changes.
     """
     directory = os.path.dirname(PREDICTIONS_FILE)
     if directory:
         os.makedirs(directory, exist_ok=True)
     if not os.path.exists(PREDICTIONS_FILE):
+        seed = []
+        if os.path.abspath(PREDICTIONS_FILE) != os.path.abspath(_SEED_PREDICTIONS_FILE) \
+                and os.path.exists(_SEED_PREDICTIONS_FILE):
+            try:
+                with open(_SEED_PREDICTIONS_FILE, "r", encoding="utf-8") as f:
+                    seed = json.load(f)
+            except (json.JSONDecodeError, IOError):
+                seed = []
         with open(PREDICTIONS_FILE, "w", encoding="utf-8") as f:
-            json.dump([], f)
+            json.dump(seed, f, indent=4, ensure_ascii=False)
 
 # ==========================================
 # OFFLINE SCHEDULE (WC 2026 JSON)
