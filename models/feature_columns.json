@@ -1,0 +1,23 @@
+[
+    "h_avg_scored",
+    "h_avg_conceded",
+    "a_avg_scored",
+    "a_avg_conceded",
+    "h_form_scored",
+    "h_form_conceded",
+    "h_form_points",
+    "a_form_scored",
+    "a_form_conceded",
+    "a_form_points",
+    "elo_home",
+    "elo_away",
+    "elo_diff",
+    "host_home",
+    "host_away",
+    "is_world_cup",
+    "sv_home",
+    "sv_away",
+    "sv_ratio",
+    "conf_strength_home",
+    "conf_strength_away"
+]

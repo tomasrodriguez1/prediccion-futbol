@@ -1,0 +1,1402 @@
+{
+    "Aden": {
+        "form_scored": 0.75,
+        "form_conceded": 6.25,
+        "form_points": 0.0
+    },
+    "Afghanistan": {
+        "form_scored": 0.6,
+        "form_conceded": 1.6,
+        "form_points": 0.6
+    },
+    "Albania": {
+        "form_scored": 1.2,
+        "form_conceded": 1.4,
+        "form_points": 1.2
+    },
+    "Algeria": {
+        "form_scored": 2.2,
+        "form_conceded": 0.6,
+        "form_points": 2.0
+    },
+    "Andorra": {
+        "form_scored": 0.2,
+        "form_conceded": 2.0,
+        "form_points": 0.2
+    },
+    "Angola": {
+        "form_scored": 1.8,
+        "form_conceded": 1.2,
+        "form_points": 1.6
+    },
+    "Anguilla": {
+        "form_scored": 1.4,
+        "form_conceded": 2.2,
+        "form_points": 1.8
+    },
+    "Antigua and Barbuda": {
+        "form_scored": 0.2,
+        "form_conceded": 1.4,
+        "form_points": 0.4
+    },
+    "Argentina": {
+        "form_scored": 3.6,
+        "form_conceded": 0.2,
+        "form_points": 3.0
+    },
+    "Armenia": {
+        "form_scored": 0.4,
+        "form_conceded": 3.0,
+        "form_points": 0.0
+    },
+    "Aruba": {
+        "form_scored": 2.2,
+        "form_conceded": 1.4,
+        "form_points": 2.0
+    },
+    "Australia": {
+        "form_scored": 1.4,
+        "form_conceded": 1.4,
+        "form_points": 1.2
+    },
+    "Austria": {
+        "form_scored": 1.8,
+        "form_conceded": 0.6,
+        "form_points": 2.0
+    },
+    "Azerbaijan": {
+        "form_scored": 1.8,
+        "form_conceded": 1.8,
+        "form_points": 0.8
+    },
+    "Bahamas": {
+        "form_scored": 0.4,
+        "form_conceded": 4.0,
+        "form_points": 0.0
+    },
+    "Bahrain": {
+        "form_scored": 1.2,
+        "form_conceded": 1.8,
+        "form_points": 1.2
+    },
+    "Bangladesh": {
+        "form_scored": 0.8,
+        "form_conceded": 1.4,
+        "form_points": 1.0
+    },
+    "Barbados": {
+        "form_scored": 1.4,
+        "form_conceded": 2.6,
+        "form_points": 0.6
+    },
+    "Belarus": {
+        "form_scored": 1.2,
+        "form_conceded": 1.0,
+        "form_points": 1.6
+    },
+    "Belgian Congo": {
+        "form_scored": 1.75,
+        "form_conceded": 2.5,
+        "form_points": 0.75
+    },
+    "Belgium": {
+        "form_scored": 3.2,
+        "form_conceded": 0.8,
+        "form_points": 2.2
+    },
+    "Belize": {
+        "form_scored": 2.0,
+        "form_conceded": 2.0,
+        "form_points": 1.2
+    },
+    "Benin": {
+        "form_scored": 0.8,
+        "form_conceded": 1.2,
+        "form_points": 1.8
+    },
+    "Bermuda": {
+        "form_scored": 0.2,
+        "form_conceded": 3.6,
+        "form_points": 0.0
+    },
+    "Bhutan": {
+        "form_scored": 0.8,
+        "form_conceded": 4.0,
+        "form_points": 0.6
+    },
+    "Bohemia": {
+        "form_scored": 2.6,
+        "form_conceded": 4.2,
+        "form_points": 0.8
+    },
+    "Bohemia and Moravia": {
+        "form_scored": 3.8,
+        "form_conceded": 4.2,
+        "form_points": 1.2
+    },
+    "Bolivia": {
+        "form_scored": 1.4,
+        "form_conceded": 1.0,
+        "form_points": 1.4
+    },
+    "Bonaire": {
+        "form_scored": 1.2,
+        "form_conceded": 3.0,
+        "form_points": 0.6
+    },
+    "Bosnia and Herzegovina": {
+        "form_scored": 2.0,
+        "form_conceded": 1.0,
+        "form_points": 1.8
+    },
+    "Botswana": {
+        "form_scored": 0.2,
+        "form_conceded": 2.0,
+        "form_points": 0.6
+    },
+    "Brazil": {
+        "form_scored": 1.8,
+        "form_conceded": 1.4,
+        "form_points": 1.4
+    },
+    "British Guiana": {
+        "form_scored": 1.2,
+        "form_conceded": 1.4,
+        "form_points": 1.0
+    },
+    "British Honduras": {
+        "form_scored": 1.5,
+        "form_conceded": 1.0,
+        "form_points": 2.0
+    },
+    "British India": {
+        "form_scored": 2.4,
+        "form_conceded": 2.2,
+        "form_points": 1.2
+    },
+    "British Virgin Islands": {
+        "form_scored": 2.8,
+        "form_conceded": 1.2,
+        "form_points": 2.0
+    },
+    "Brunei": {
+        "form_scored": 0.6,
+        "form_conceded": 3.4,
+        "form_points": 0.6
+    },
+    "Bulgaria": {
+        "form_scored": 2.6,
+        "form_conceded": 1.8,
+        "form_points": 1.8
+    },
+    "Burkina Faso": {
+        "form_scored": 1.6,
+        "form_conceded": 1.0,
+        "form_points": 1.4
+    },
+    "Burma": {
+        "form_scored": 1.2,
+        "form_conceded": 2.2,
+        "form_points": 1.0
+    },
+    "Burundi": {
+        "form_scored": 1.6,
+        "form_conceded": 1.6,
+        "form_points": 1.2
+    },
+    "Cambodia": {
+        "form_scored": 1.2,
+        "form_conceded": 2.0,
+        "form_points": 0.2
+    },
+    "Cameroon": {
+        "form_scored": 1.2,
+        "form_conceded": 1.0,
+        "form_points": 1.8
+    },
+    "Canada": {
+        "form_scored": 1.4,
+        "form_conceded": 0.4,
+        "form_points": 2.2
+    },
+    "Cape Verde": {
+        "form_scored": 1.4,
+        "form_conceded": 1.2,
+        "form_points": 1.2
+    },
+    "Cayman Islands": {
+        "form_scored": 1.4,
+        "form_conceded": 0.8,
+        "form_points": 1.4
+    },
+    "Central African Republic": {
+        "form_scored": 1.0,
+        "form_conceded": 2.4,
+        "form_points": 1.2
+    },
+    "Ceylon": {
+        "form_scored": 0.4,
+        "form_conceded": 3.6,
+        "form_points": 0.0
+    },
+    "Chad": {
+        "form_scored": 1.0,
+        "form_conceded": 3.0,
+        "form_points": 0.2
+    },
+    "Chagos Islands": {
+        "form_scored": 1.0,
+        "form_conceded": 6.0,
+        "form_points": 0.0
+    },
+    "Chile": {
+        "form_scored": 2.2,
+        "form_conceded": 1.6,
+        "form_points": 2.4
+    },
+    "China": {
+        "form_scored": 1.0,
+        "form_conceded": 1.2,
+        "form_points": 1.4
+    },
+    "Colombia": {
+        "form_scored": 2.0,
+        "form_conceded": 1.4,
+        "form_points": 1.8
+    },
+    "Comoros": {
+        "form_scored": 0.0,
+        "form_conceded": 0.6,
+        "form_points": 0.6
+    },
+    "Congo": {
+        "form_scored": 0.8,
+        "form_conceded": 1.8,
+        "form_points": 0.2
+    },
+    "Congo-Leopoldville": {
+        "form_scored": 1.0,
+        "form_conceded": 1.0,
+        "form_points": 1.2
+    },
+    "Cook Islands": {
+        "form_scored": 0.6,
+        "form_conceded": 2.8,
+        "form_points": 0.6
+    },
+    "Costa Rica": {
+        "form_scored": 0.6,
+        "form_conceded": 2.2,
+        "form_points": 0.4
+    },
+    "Croatia": {
+        "form_scored": 1.8,
+        "form_conceded": 1.8,
+        "form_points": 1.8
+    },
+    "Cuba": {
+        "form_scored": 1.6,
+        "form_conceded": 1.0,
+        "form_points": 1.6
+    },
+    "Cura\u00e7ao": {
+        "form_scored": 1.8,
+        "form_conceded": 1.6,
+        "form_points": 1.0
+    },
+    "Cyprus": {
+        "form_scored": 1.8,
+        "form_conceded": 1.8,
+        "form_points": 1.2
+    },
+    "Czech Republic": {
+        "form_scored": 2.4,
+        "form_conceded": 1.2,
+        "form_points": 1.6
+    },
+    "DR Congo": {
+        "form_scored": 1.4,
+        "form_conceded": 0.6,
+        "form_points": 1.8
+    },
+    "Dahomey": {
+        "form_scored": 1.2,
+        "form_conceded": 1.6,
+        "form_points": 1.4
+    },
+    "Denmark": {
+        "form_scored": 2.6,
+        "form_conceded": 1.8,
+        "form_points": 1.6
+    },
+    "Djibouti": {
+        "form_scored": 0.4,
+        "form_conceded": 2.0,
+        "form_points": 0.6
+    },
+    "Dominica": {
+        "form_scored": 0.6,
+        "form_conceded": 2.4,
+        "form_points": 0.2
+    },
+    "Dominican Republic": {
+        "form_scored": 1.0,
+        "form_conceded": 0.8,
+        "form_points": 1.2
+    },
+    "East Timor": {
+        "form_scored": 0.8,
+        "form_conceded": 2.8,
+        "form_points": 0.6
+    },
+    "Eastern Samoa": {
+        "form_scored": 1.2,
+        "form_conceded": 4.0,
+        "form_points": 0.6
+    },
+    "Ecuador": {
+        "form_scored": 1.0,
+        "form_conceded": 0.6,
+        "form_points": 1.4
+    },
+    "Egypt": {
+        "form_scored": 1.4,
+        "form_conceded": 0.6,
+        "form_points": 1.6
+    },
+    "El Salvador": {
+        "form_scored": 0.6,
+        "form_conceded": 2.0,
+        "form_points": 0.8
+    },
+    "England": {
+        "form_scored": 2.0,
+        "form_conceded": 0.4,
+        "form_points": 2.0
+    },
+    "Equatorial Guinea": {
+        "form_scored": 0.8,
+        "form_conceded": 1.4,
+        "form_points": 0.8
+    },
+    "Eritrea": {
+        "form_scored": 1.6,
+        "form_conceded": 1.2,
+        "form_points": 1.8
+    },
+    "Estonia": {
+        "form_scored": 1.4,
+        "form_conceded": 2.0,
+        "form_points": 1.0
+    },
+    "Eswatini": {
+        "form_scored": 0.6,
+        "form_conceded": 2.2,
+        "form_points": 0.2
+    },
+    "Ethiopia": {
+        "form_scored": 1.2,
+        "form_conceded": 1.0,
+        "form_points": 1.8
+    },
+    "FS Micronesia": {
+        "form_scored": 1.4,
+        "form_conceded": 10.4,
+        "form_points": 0.6
+    },
+    "Falkland Islands": {
+        "form_scored": 0.0,
+        "form_conceded": 8.0,
+        "form_points": 0.0
+    },
+    "Faroe Islands": {
+        "form_scored": 2.0,
+        "form_conceded": 1.0,
+        "form_points": 2.4
+    },
+    "Fiji": {
+        "form_scored": 0.2,
+        "form_conceded": 3.2,
+        "form_points": 0.2
+    },
+    "Finland": {
+        "form_scored": 1.4,
+        "form_conceded": 1.2,
+        "form_points": 1.4
+    },
+    "France": {
+        "form_scored": 2.8,
+        "form_conceded": 1.0,
+        "form_points": 2.6
+    },
+    "French Congo": {
+        "form_scored": 5.0,
+        "form_conceded": 1.0,
+        "form_points": 3.0
+    },
+    "French Dahomey": {
+        "form_scored": 0.0,
+        "form_conceded": 5.0,
+        "form_points": 0.0
+    },
+    "French Guiana": {
+        "form_scored": 1.4,
+        "form_conceded": 2.0,
+        "form_points": 0.4
+    },
+    "French Somaliland": {
+        "form_scored": 1.0,
+        "form_conceded": 5.8,
+        "form_points": 0.0
+    },
+    "French Sudan": {
+        "form_scored": 0.5,
+        "form_conceded": 3.0,
+        "form_points": 0.0
+    },
+    "French Togoland": {
+        "form_scored": 2.8,
+        "form_conceded": 1.4,
+        "form_points": 2.2
+    },
+    "Gabon": {
+        "form_scored": 1.4,
+        "form_conceded": 2.4,
+        "form_points": 0.2
+    },
+    "Gambia": {
+        "form_scored": 3.0,
+        "form_conceded": 1.8,
+        "form_points": 1.4
+    },
+    "Georgia": {
+        "form_scored": 1.2,
+        "form_conceded": 2.4,
+        "form_points": 0.8
+    },
+    "Germany": {
+        "form_scored": 3.0,
+        "form_conceded": 0.8,
+        "form_points": 3.0
+    },
+    "Ghana": {
+        "form_scored": 0.6,
+        "form_conceded": 2.2,
+        "form_points": 0.2
+    },
+    "Gibraltar": {
+        "form_scored": 0.2,
+        "form_conceded": 2.6,
+        "form_points": 0.0
+    },
+    "Gold Coast": {
+        "form_scored": 2.6,
+        "form_conceded": 1.6,
+        "form_points": 1.6
+    },
+    "Greece": {
+        "form_scored": 0.8,
+        "form_conceded": 1.2,
+        "form_points": 1.0
+    },
+    "Greenland": {
+        "form_scored": 0.8,
+        "form_conceded": 3.2,
+        "form_points": 0.0
+    },
+    "Grenada": {
+        "form_scored": 0.8,
+        "form_conceded": 2.8,
+        "form_points": 0.6
+    },
+    "Guadeloupe": {
+        "form_scored": 1.4,
+        "form_conceded": 2.0,
+        "form_points": 1.2
+    },
+    "Guam": {
+        "form_scored": 3.2,
+        "form_conceded": 2.0,
+        "form_points": 1.8
+    },
+    "Guatemala": {
+        "form_scored": 1.2,
+        "form_conceded": 2.4,
+        "form_points": 1.2
+    },
+    "Guinea": {
+        "form_scored": 1.4,
+        "form_conceded": 1.2,
+        "form_points": 1.2
+    },
+    "Guinea-Bissau": {
+        "form_scored": 0.6,
+        "form_conceded": 1.6,
+        "form_points": 0.8
+    },
+    "Guyana": {
+        "form_scored": 2.8,
+        "form_conceded": 0.6,
+        "form_points": 3.0
+    },
+    "Haiti": {
+        "form_scored": 0.8,
+        "form_conceded": 1.0,
+        "form_points": 1.4
+    },
+    "Honduras": {
+        "form_scored": 1.0,
+        "form_conceded": 0.8,
+        "form_points": 1.2
+    },
+    "Hong Kong": {
+        "form_scored": 1.6,
+        "form_conceded": 1.8,
+        "form_points": 1.0
+    },
+    "Hungary": {
+        "form_scored": 1.4,
+        "form_conceded": 0.8,
+        "form_points": 2.0
+    },
+    "Iceland": {
+        "form_scored": 0.6,
+        "form_conceded": 2.4,
+        "form_points": 0.4
+    },
+    "India": {
+        "form_scored": 1.8,
+        "form_conceded": 1.4,
+        "form_points": 1.2
+    },
+    "Indonesia": {
+        "form_scored": 1.2,
+        "form_conceded": 1.0,
+        "form_points": 0.8
+    },
+    "Iran": {
+        "form_scored": 1.6,
+        "form_conceded": 0.4,
+        "form_points": 1.6
+    },
+    "Iraq": {
+        "form_scored": 1.2,
+        "form_conceded": 1.0,
+        "form_points": 1.8
+    },
+    "Israel": {
+        "form_scored": 1.2,
+        "form_conceded": 2.2,
+        "form_points": 1.0
+    },
+    "Italy": {
+        "form_scored": 1.8,
+        "form_conceded": 1.0,
+        "form_points": 2.0
+    },
+    "Ivory Coast": {
+        "form_scored": 2.6,
+        "form_conceded": 1.0,
+        "form_points": 2.4
+    },
+    "Jamaica": {
+        "form_scored": 1.2,
+        "form_conceded": 0.2,
+        "form_points": 2.4
+    },
+    "Japan": {
+        "form_scored": 2.0,
+        "form_conceded": 0.4,
+        "form_points": 3.0
+    },
+    "Jordan": {
+        "form_scored": 1.6,
+        "form_conceded": 1.4,
+        "form_points": 1.6
+    },
+    "Kazakhstan": {
+        "form_scored": 1.0,
+        "form_conceded": 1.0,
+        "form_points": 1.4
+    },
+    "Kenya": {
+        "form_scored": 0.8,
+        "form_conceded": 2.6,
+        "form_points": 0.8
+    },
+    "Khmer Republic": {
+        "form_scored": 1.2,
+        "form_conceded": 1.6,
+        "form_points": 1.2
+    },
+    "Kiribati": {
+        "form_scored": 0.4,
+        "form_conceded": 12.8,
+        "form_points": 0.0
+    },
+    "Kosovo": {
+        "form_scored": 1.6,
+        "form_conceded": 1.0,
+        "form_points": 2.0
+    },
+    "Kurdistan": {
+        "form_scored": 2.0,
+        "form_conceded": 1.0,
+        "form_points": 2.0
+    },
+    "Kuwait": {
+        "form_scored": 1.4,
+        "form_conceded": 1.8,
+        "form_points": 1.0
+    },
+    "Kyrgyzstan": {
+        "form_scored": 0.8,
+        "form_conceded": 2.6,
+        "form_points": 0.2
+    },
+    "Laos": {
+        "form_scored": 0.8,
+        "form_conceded": 2.2,
+        "form_points": 1.2
+    },
+    "Latvia": {
+        "form_scored": 0.6,
+        "form_conceded": 1.4,
+        "form_points": 1.4
+    },
+    "Lebanon": {
+        "form_scored": 2.0,
+        "form_conceded": 0.4,
+        "form_points": 2.0
+    },
+    "Lesotho": {
+        "form_scored": 0.6,
+        "form_conceded": 0.4,
+        "form_points": 1.6
+    },
+    "Liberia": {
+        "form_scored": 1.2,
+        "form_conceded": 1.4,
+        "form_points": 1.0
+    },
+    "Libya": {
+        "form_scored": 0.6,
+        "form_conceded": 0.4,
+        "form_points": 1.4
+    },
+    "Liechtenstein": {
+        "form_scored": 0.6,
+        "form_conceded": 2.8,
+        "form_points": 0.6
+    },
+    "Lithuania": {
+        "form_scored": 0.4,
+        "form_conceded": 1.6,
+        "form_points": 0.8
+    },
+    "Luxembourg": {
+        "form_scored": 1.0,
+        "form_conceded": 1.0,
+        "form_points": 1.2
+    },
+    "Macao": {
+        "form_scored": 0.4,
+        "form_conceded": 3.2,
+        "form_points": 0.0
+    },
+    "Macedonia": {
+        "form_scored": 2.4,
+        "form_conceded": 1.0,
+        "form_points": 2.4
+    },
+    "Madagascar": {
+        "form_scored": 1.8,
+        "form_conceded": 2.2,
+        "form_points": 1.4
+    },
+    "Malawi": {
+        "form_scored": 0.2,
+        "form_conceded": 0.6,
+        "form_points": 0.8
+    },
+    "Malaya": {
+        "form_scored": 2.0,
+        "form_conceded": 2.8,
+        "form_points": 0.8
+    },
+    "Malaysia": {
+        "form_scored": 2.2,
+        "form_conceded": 0.8,
+        "form_points": 2.4
+    },
+    "Maldives": {
+        "form_scored": 0.6,
+        "form_conceded": 1.8,
+        "form_points": 0.8
+    },
+    "Mali": {
+        "form_scored": 0.4,
+        "form_conceded": 0.6,
+        "form_points": 0.8
+    },
+    "Mali Federation": {
+        "form_scored": 2.5,
+        "form_conceded": 2.0,
+        "form_points": 2.25
+    },
+    "Malta": {
+        "form_scored": 0.8,
+        "form_conceded": 2.4,
+        "form_points": 0.6
+    },
+    "Marshall Islands": {
+        "form_scored": 1.0,
+        "form_conceded": 3.5,
+        "form_points": 0.0
+    },
+    "Martinique": {
+        "form_scored": 0.4,
+        "form_conceded": 1.4,
+        "form_points": 0.4
+    },
+    "Mauritania": {
+        "form_scored": 0.4,
+        "form_conceded": 2.0,
+        "form_points": 0.2
+    },
+    "Mauritius": {
+        "form_scored": 0.2,
+        "form_conceded": 1.0,
+        "form_points": 0.6
+    },
+    "Mayotte": {
+        "form_scored": 0.8,
+        "form_conceded": 1.0,
+        "form_points": 1.0
+    },
+    "Mexico": {
+        "form_scored": 2.0,
+        "form_conceded": 0.4,
+        "form_points": 2.2
+    },
+    "Moldova": {
+        "form_scored": 0.8,
+        "form_conceded": 2.4,
+        "form_points": 0.2
+    },
+    "Monaco": {
+        "form_scored": 1.0,
+        "form_conceded": 4.3333,
+        "form_points": 0.3333
+    },
+    "Mongolia": {
+        "form_scored": 1.0,
+        "form_conceded": 2.4,
+        "form_points": 1.2
+    },
+    "Montenegro": {
+        "form_scored": 2.0,
+        "form_conceded": 1.6,
+        "form_points": 1.8
+    },
+    "Montserrat": {
+        "form_scored": 0.4,
+        "form_conceded": 1.4,
+        "form_points": 0.6
+    },
+    "Morocco": {
+        "form_scored": 2.4,
+        "form_conceded": 0.6,
+        "form_points": 2.0
+    },
+    "Mozambique": {
+        "form_scored": 1.0,
+        "form_conceded": 2.6,
+        "form_points": 0.6
+    },
+    "Myanmar": {
+        "form_scored": 1.2,
+        "form_conceded": 2.2,
+        "form_points": 1.4
+    },
+    "Namibia": {
+        "form_scored": 0.0,
+        "form_conceded": 2.0,
+        "form_points": 0.2
+    },
+    "Nepal": {
+        "form_scored": 0.6,
+        "form_conceded": 1.6,
+        "form_points": 0.2
+    },
+    "Netherlands": {
+        "form_scored": 2.4,
+        "form_conceded": 0.6,
+        "form_points": 2.2
+    },
+    "Netherlands Antilles": {
+        "form_scored": 1.2,
+        "form_conceded": 1.8,
+        "form_points": 0.4
+    },
+    "New Caledonia": {
+        "form_scored": 1.2,
+        "form_conceded": 1.0,
+        "form_points": 1.4
+    },
+    "New Hebrides": {
+        "form_scored": 2.6,
+        "form_conceded": 2.2,
+        "form_points": 0.6
+    },
+    "New Zealand": {
+        "form_scored": 1.2,
+        "form_conceded": 1.6,
+        "form_points": 0.8
+    },
+    "Nicaragua": {
+        "form_scored": 0.8,
+        "form_conceded": 2.4,
+        "form_points": 0.6
+    },
+    "Niger": {
+        "form_scored": 0.8,
+        "form_conceded": 1.0,
+        "form_points": 1.0
+    },
+    "Nigeria": {
+        "form_scored": 1.2,
+        "form_conceded": 0.6,
+        "form_points": 1.8
+    },
+    "Niue": {
+        "form_scored": 0.0,
+        "form_conceded": 16.5,
+        "form_points": 0.0
+    },
+    "North Korea": {
+        "form_scored": 1.0,
+        "form_conceded": 2.6,
+        "form_points": 0.4
+    },
+    "North Macedonia": {
+        "form_scored": 0.4,
+        "form_conceded": 2.4,
+        "form_points": 0.6
+    },
+    "North Vietnam": {
+        "form_scored": 1.8,
+        "form_conceded": 1.6,
+        "form_points": 1.4
+    },
+    "North Yemen": {
+        "form_scored": 0.0,
+        "form_conceded": 1.4,
+        "form_points": 0.0
+    },
+    "Northern Cyprus": {
+        "form_scored": 1.6,
+        "form_conceded": 0.6,
+        "form_points": 2.0
+    },
+    "Northern Ireland": {
+        "form_scored": 0.4,
+        "form_conceded": 1.0,
+        "form_points": 0.8
+    },
+    "Northern Mariana Islands": {
+        "form_scored": 1.2,
+        "form_conceded": 3.4,
+        "form_points": 0.8
+    },
+    "Northern Rhodesia": {
+        "form_scored": 2.8,
+        "form_conceded": 1.2,
+        "form_points": 1.8
+    },
+    "Norway": {
+        "form_scored": 2.0,
+        "form_conceded": 1.0,
+        "form_points": 1.6
+    },
+    "Nyasaland": {
+        "form_scored": 0.6,
+        "form_conceded": 6.6,
+        "form_points": 0.0
+    },
+    "Oman": {
+        "form_scored": 0.6,
+        "form_conceded": 1.0,
+        "form_points": 1.0
+    },
+    "Pakistan": {
+        "form_scored": 0.4,
+        "form_conceded": 1.8,
+        "form_points": 0.4
+    },
+    "Palau": {
+        "form_scored": 1.5,
+        "form_conceded": 13.5,
+        "form_points": 0.0
+    },
+    "Palestine": {
+        "form_scored": 0.8,
+        "form_conceded": 0.8,
+        "form_points": 1.2
+    },
+    "Panama": {
+        "form_scored": 1.4,
+        "form_conceded": 0.8,
+        "form_points": 1.6
+    },
+    "Papua New Guinea": {
+        "form_scored": 2.0,
+        "form_conceded": 1.0,
+        "form_points": 2.6
+    },
+    "Paraguay": {
+        "form_scored": 1.0,
+        "form_conceded": 1.4,
+        "form_points": 1.2
+    },
+    "Peru": {
+        "form_scored": 1.2,
+        "form_conceded": 1.4,
+        "form_points": 1.0
+    },
+    "Philippines": {
+        "form_scored": 2.4,
+        "form_conceded": 1.0,
+        "form_points": 2.2
+    },
+    "Poland": {
+        "form_scored": 2.0,
+        "form_conceded": 1.4,
+        "form_points": 2.0
+    },
+    "Portugal": {
+        "form_scored": 2.6,
+        "form_conceded": 1.0,
+        "form_points": 1.6
+    },
+    "Portuguese Guinea": {
+        "form_scored": 2.0,
+        "form_conceded": 2.2,
+        "form_points": 1.8
+    },
+    "Puerto Rico": {
+        "form_scored": 1.6,
+        "form_conceded": 1.6,
+        "form_points": 1.8
+    },
+    "Qatar": {
+        "form_scored": 0.8,
+        "form_conceded": 1.6,
+        "form_points": 0.8
+    },
+    "Republic of Ireland": {
+        "form_scored": 2.4,
+        "form_conceded": 0.8,
+        "form_points": 2.2
+    },
+    "Reunion": {
+        "form_scored": 0.8,
+        "form_conceded": 0.8,
+        "form_points": 1.2
+    },
+    "Rhodesia": {
+        "form_scored": 2.0,
+        "form_conceded": 2.6,
+        "form_points": 1.0
+    },
+    "Romania": {
+        "form_scored": 1.8,
+        "form_conceded": 1.4,
+        "form_points": 1.2
+    },
+    "Ruanda-Urundi": {
+        "form_scored": 1.0,
+        "form_conceded": 9.0,
+        "form_points": 0.0
+    },
+    "Russia": {
+        "form_scored": 1.4,
+        "form_conceded": 0.8,
+        "form_points": 1.6
+    },
+    "Rwanda": {
+        "form_scored": 1.4,
+        "form_conceded": 0.8,
+        "form_points": 1.8
+    },
+    "Saar": {
+        "form_scored": 1.2,
+        "form_conceded": 3.0,
+        "form_points": 0.2
+    },
+    "Saint Barthelemy": {
+        "form_scored": 3.0,
+        "form_conceded": 2.4,
+        "form_points": 1.4
+    },
+    "Saint Kitts": {
+        "form_scored": 2.6,
+        "form_conceded": 0.8,
+        "form_points": 3.0
+    },
+    "Saint Kitts and Nevis": {
+        "form_scored": 1.6,
+        "form_conceded": 2.6,
+        "form_points": 1.4
+    },
+    "Saint Lucia": {
+        "form_scored": 0.8,
+        "form_conceded": 3.4,
+        "form_points": 0.6
+    },
+    "Saint Martin": {
+        "form_scored": 1.8,
+        "form_conceded": 1.0,
+        "form_points": 1.8
+    },
+    "Saint Pierre and Miquelon": {
+        "form_scored": 0.4,
+        "form_conceded": 11.4,
+        "form_points": 0.0
+    },
+    "Samoa": {
+        "form_scored": 1.0,
+        "form_conceded": 3.2,
+        "form_points": 1.2
+    },
+    "San Marino": {
+        "form_scored": 0.4,
+        "form_conceded": 2.8,
+        "form_points": 0.2
+    },
+    "Sao Tome and Principe": {
+        "form_scored": 0.2,
+        "form_conceded": 2.6,
+        "form_points": 0.6
+    },
+    "Saudi Arabia": {
+        "form_scored": 0.2,
+        "form_conceded": 1.4,
+        "form_points": 0.4
+    },
+    "Scotland": {
+        "form_scored": 1.6,
+        "form_conceded": 1.6,
+        "form_points": 1.2
+    },
+    "Senegal": {
+        "form_scored": 1.4,
+        "form_conceded": 0.2,
+        "form_points": 2.6
+    },
+    "Serbia": {
+        "form_scored": 1.0,
+        "form_conceded": 2.4,
+        "form_points": 1.2
+    },
+    "Seychelles": {
+        "form_scored": 0.2,
+        "form_conceded": 4.2,
+        "form_points": 0.2
+    },
+    "Sierra Leone": {
+        "form_scored": 1.2,
+        "form_conceded": 0.8,
+        "form_points": 1.6
+    },
+    "Singapore": {
+        "form_scored": 1.6,
+        "form_conceded": 1.2,
+        "form_points": 2.0
+    },
+    "Sint Eustatius": {
+        "form_scored": 2.3333,
+        "form_conceded": 1.6667,
+        "form_points": 1.6667
+    },
+    "Sint Maarten": {
+        "form_scored": 1.4,
+        "form_conceded": 0.8,
+        "form_points": 2.2
+    },
+    "Slovakia": {
+        "form_scored": 1.6,
+        "form_conceded": 2.0,
+        "form_points": 1.8
+    },
+    "Slovenia": {
+        "form_scored": 0.8,
+        "form_conceded": 1.2,
+        "form_points": 1.0
+    },
+    "Solomon Islands": {
+        "form_scored": 1.2,
+        "form_conceded": 3.6,
+        "form_points": 0.2
+    },
+    "Somalia": {
+        "form_scored": 0.6,
+        "form_conceded": 0.2,
+        "form_points": 1.8
+    },
+    "South Africa": {
+        "form_scored": 1.2,
+        "form_conceded": 1.8,
+        "form_points": 0.8
+    },
+    "South Korea": {
+        "form_scored": 1.0,
+        "form_conceded": 1.2,
+        "form_points": 1.8
+    },
+    "South Sudan": {
+        "form_scored": 0.8,
+        "form_conceded": 1.6,
+        "form_points": 0.8
+    },
+    "South Vietnam": {
+        "form_scored": 0.2,
+        "form_conceded": 2.4,
+        "form_points": 0.0
+    },
+    "South Yemen": {
+        "form_scored": 0.8,
+        "form_conceded": 2.2,
+        "form_points": 0.8
+    },
+    "Southern Rhodesia": {
+        "form_scored": 0.8,
+        "form_conceded": 1.2,
+        "form_points": 1.2
+    },
+    "Spain": {
+        "form_scored": 2.6,
+        "form_conceded": 0.4,
+        "form_points": 2.2
+    },
+    "Sri Lanka": {
+        "form_scored": 1.2,
+        "form_conceded": 1.6,
+        "form_points": 1.4
+    },
+    "St Vincent & Grenadines": {
+        "form_scored": 1.6,
+        "form_conceded": 1.6,
+        "form_points": 1.8
+    },
+    "Sudan": {
+        "form_scored": 0.6,
+        "form_conceded": 2.2,
+        "form_points": 0.6
+    },
+    "Suriname": {
+        "form_scored": 1.6,
+        "form_conceded": 1.4,
+        "form_points": 1.0
+    },
+    "Swaziland": {
+        "form_scored": 0.2,
+        "form_conceded": 0.8,
+        "form_points": 0.4
+    },
+    "Sweden": {
+        "form_scored": 1.6,
+        "form_conceded": 1.8,
+        "form_points": 1.4
+    },
+    "Switzerland": {
+        "form_scored": 1.6,
+        "form_conceded": 1.2,
+        "form_points": 1.2
+    },
+    "Syria": {
+        "form_scored": 1.4,
+        "form_conceded": 0.6,
+        "form_points": 1.6
+    },
+    "S\u00e3o Tome and Principe": {
+        "form_scored": 0.75,
+        "form_conceded": 3.0,
+        "form_points": 0.75
+    },
+    "S\u00e3o Tom\u00e9 and Pr\u00edncipe": {
+        "form_scored": 0.8,
+        "form_conceded": 2.8,
+        "form_points": 0.6
+    },
+    "Tahiti": {
+        "form_scored": 1.4,
+        "form_conceded": 1.4,
+        "form_points": 1.8
+    },
+    "Taiwan": {
+        "form_scored": 0.6,
+        "form_conceded": 4.0,
+        "form_points": 0.0
+    },
+    "Tajikistan": {
+        "form_scored": 2.6,
+        "form_conceded": 0.6,
+        "form_points": 2.2
+    },
+    "Tanganyika": {
+        "form_scored": 1.6,
+        "form_conceded": 2.2,
+        "form_points": 0.8
+    },
+    "Tanzania": {
+        "form_scored": 1.6,
+        "form_conceded": 0.8,
+        "form_points": 1.0
+    },
+    "Thailand": {
+        "form_scored": 3.4,
+        "form_conceded": 0.8,
+        "form_points": 3.0
+    },
+    "Tibet": {
+        "form_scored": 1.0,
+        "form_conceded": 3.0,
+        "form_points": 0.2
+    },
+    "Togo": {
+        "form_scored": 0.8,
+        "form_conceded": 0.6,
+        "form_points": 1.6
+    },
+    "Tonga": {
+        "form_scored": 2.2,
+        "form_conceded": 2.0,
+        "form_points": 1.2
+    },
+    "Trinidad and Tobago": {
+        "form_scored": 1.0,
+        "form_conceded": 2.6,
+        "form_points": 0.8
+    },
+    "Tunisia": {
+        "form_scored": 1.0,
+        "form_conceded": 1.0,
+        "form_points": 1.2
+    },
+    "Turkey": {
+        "form_scored": 2.0,
+        "form_conceded": 0.6,
+        "form_points": 2.6
+    },
+    "Turkmenistan": {
+        "form_scored": 1.4,
+        "form_conceded": 1.4,
+        "form_points": 1.2
+    },
+    "Turks and Caicos Islands": {
+        "form_scored": 1.2,
+        "form_conceded": 2.2,
+        "form_points": 1.4
+    },
+    "Tuvalu": {
+        "form_scored": 1.8,
+        "form_conceded": 5.6,
+        "form_points": 1.2
+    },
+    "US Virgin Islands": {
+        "form_scored": 2.2,
+        "form_conceded": 1.8,
+        "form_points": 1.4
+    },
+    "USA": {
+        "form_scored": 2.2,
+        "form_conceded": 2.0,
+        "form_points": 1.8
+    },
+    "Ubangi-Shari": {
+        "form_scored": 5.0,
+        "form_conceded": 1.0,
+        "form_points": 3.0
+    },
+    "Uganda": {
+        "form_scored": 1.0,
+        "form_conceded": 2.4,
+        "form_points": 0.8
+    },
+    "Ukraine": {
+        "form_scored": 1.2,
+        "form_conceded": 1.6,
+        "form_points": 1.8
+    },
+    "United Arab Emirates": {
+        "form_scored": 1.0,
+        "form_conceded": 1.2,
+        "form_points": 1.2
+    },
+    "Upper Volta": {
+        "form_scored": 1.0,
+        "form_conceded": 1.0,
+        "form_points": 1.2
+    },
+    "Uruguay": {
+        "form_scored": 0.8,
+        "form_conceded": 1.4,
+        "form_points": 1.2
+    },
+    "Uzbekistan": {
+        "form_scored": 1.0,
+        "form_conceded": 1.0,
+        "form_points": 1.2
+    },
+    "Vanuatu": {
+        "form_scored": 1.6,
+        "form_conceded": 1.2,
+        "form_points": 1.6
+    },
+    "Venezuela": {
+        "form_scored": 1.0,
+        "form_conceded": 0.8,
+        "form_points": 1.4
+    },
+    "Vietnam": {
+        "form_scored": 2.4,
+        "form_conceded": 0.4,
+        "form_points": 3.0
+    },
+    "Wales": {
+        "form_scored": 2.2,
+        "form_conceded": 0.8,
+        "form_points": 1.8
+    },
+    "Wallis and Futuna": {
+        "form_scored": 1.4,
+        "form_conceded": 7.4,
+        "form_points": 0.6
+    },
+    "Western Samoa": {
+        "form_scored": 1.4,
+        "form_conceded": 2.4,
+        "form_points": 1.4
+    },
+    "Yemen": {
+        "form_scored": 4.4,
+        "form_conceded": 1.0,
+        "form_points": 2.2
+    },
+    "Zambia": {
+        "form_scored": 0.2,
+        "form_conceded": 2.2,
+        "form_points": 0.4
+    },
+    "Zanzibar": {
+        "form_scored": 0.6,
+        "form_conceded": 1.0,
+        "form_points": 0.6
+    },
+    "Zimbabwe": {
+        "form_scored": 1.4,
+        "form_conceded": 1.6,
+        "form_points": 0.8
+    }
+}

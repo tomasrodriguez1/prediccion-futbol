@@ -1,0 +1,11 @@
+.env
+.claude/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large raw datasets that are not required for app startup or prediction.
+kaggle-football-data-transfermarkt/
+data-worldcup/data-raw/
+data-worldcup/codebook/

@@ -1,0 +1,28 @@
+{
+  "name": "Polla Mundial 2026",
+  "short_name": "Polla 2026",
+  "description": "Predicciones, probabilidades y simulaciones para el Mundial 2026.",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait",
+  "background_color": "#0d111d",
+  "theme_color": "#0d111d",
+  "categories": ["sports", "utilities"],
+  "icons": [
+    {
+      "src": "/app/static/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/app/static/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
