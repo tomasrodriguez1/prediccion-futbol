@@ -236,6 +236,111 @@ def inject_premium_css():
                 text-align: center;
             }
 
+            .prediction-log-section {
+                margin-top: 14px;
+            }
+
+            .prediction-log-section h4 {
+                margin-bottom: 2px;
+            }
+
+            .prediction-log-card {
+                background: rgba(255, 255, 255, 0.025);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                border-radius: 12px;
+                padding: 14px;
+                margin: 10px 0 8px;
+            }
+
+            .prediction-log-top {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 14px;
+            }
+
+            .prediction-match-name {
+                color: #ffffff;
+                font-size: 1.02rem;
+                font-weight: 800;
+                line-height: 1.2;
+            }
+
+            .prediction-match-time {
+                color: #8892b0;
+                font-size: 0.78rem;
+                line-height: 1.25;
+                text-align: right;
+                white-space: nowrap;
+            }
+
+            .prediction-score-strip {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 11px;
+            }
+
+            .prediction-score-box {
+                background: rgba(255, 255, 255, 0.035);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                border-radius: 10px;
+                padding: 7px 10px;
+                min-width: 110px;
+            }
+
+            .prediction-score-label {
+                color: #8892b0;
+                display: block;
+                font-size: 0.72rem;
+                font-weight: 700;
+                line-height: 1;
+                text-transform: uppercase;
+            }
+
+            .prediction-score-value {
+                color: #ffffff;
+                display: block;
+                font-size: 1.1rem;
+                font-weight: 800;
+                line-height: 1.25;
+                margin-top: 4px;
+            }
+
+            .prediction-score-value.is-pick {
+                color: #00E676;
+            }
+
+            .prediction-eval-badge {
+                border-radius: 999px;
+                display: inline-block;
+                font-size: 0.74rem;
+                font-weight: 800;
+                line-height: 1;
+                padding: 7px 10px;
+                text-transform: uppercase;
+            }
+
+            .prediction-meta-line {
+                color: #aab4cf;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px 14px;
+                margin-top: 10px;
+                font-size: 0.82rem;
+                line-height: 1.35;
+            }
+
+            .prediction-meta-line b {
+                color: #dbe7ff;
+            }
+
+            .prediction-delete-wrap {
+                margin: 0 0 14px;
+                max-width: 150px;
+            }
+
             @media (max-width: 768px) {
                 .main .block-container {
                     padding: 0.85rem 0.75rem 2rem;
@@ -329,6 +434,77 @@ def inject_premium_css():
 
                 div.stButton > button:hover {
                     transform: none !important;
+                }
+
+                .prediction-log-section {
+                    margin-top: 10px;
+                }
+
+                .prediction-log-card {
+                    border-radius: 9px;
+                    margin: 7px 0 4px;
+                    padding: 9px;
+                }
+
+                .prediction-log-top {
+                    align-items: flex-start;
+                    gap: 7px;
+                }
+
+                .prediction-match-name {
+                    font-size: 0.92rem;
+                    line-height: 1.15;
+                }
+
+                .prediction-match-time {
+                    font-size: 0.68rem;
+                    max-width: 92px;
+                    white-space: normal;
+                }
+
+                .prediction-score-strip {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                    gap: 6px;
+                    margin-top: 8px;
+                }
+
+                .prediction-score-box {
+                    border-radius: 8px;
+                    min-width: 0;
+                    padding: 6px 8px;
+                }
+
+                .prediction-score-label {
+                    font-size: 0.62rem;
+                }
+
+                .prediction-score-value {
+                    font-size: 0.98rem;
+                    margin-top: 3px;
+                }
+
+                .prediction-eval-badge {
+                    font-size: 0.63rem;
+                    padding: 6px 8px;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .prediction-meta-line {
+                    display: block;
+                    font-size: 0.72rem;
+                    margin-top: 7px;
+                }
+
+                .prediction-meta-line span {
+                    display: block;
+                    margin-top: 2px;
+                }
+
+                .prediction-delete-wrap {
+                    margin: 0 0 10px;
+                    max-width: 100%;
                 }
 
                 .stDataFrame {
@@ -1210,16 +1386,6 @@ with tab_dashboard:
             if selected_category is None or p["_evaluation"]["category"] == selected_category
         ]
 
-        now = datetime.now()
-        upcoming_preds = []
-        played_preds = []
-        for pred in visible_preds:
-            scheduled_at = (pred.get("_schedule") or {}).get("scheduled_at")
-            if pred["_real_result"] or (scheduled_at and scheduled_at <= now):
-                played_preds.append(pred)
-            else:
-                upcoming_preds.append(pred)
-
         def _sort_datetime(pred, default):
             scheduled_at = (pred.get("_schedule") or {}).get("scheduled_at")
             if scheduled_at:
@@ -1232,8 +1398,28 @@ with tab_dashboard:
                     pass
             return default
 
-        upcoming_preds = sorted(upcoming_preds, key=lambda p: _sort_datetime(p, datetime.max))
-        played_preds = sorted(played_preds, key=lambda p: _sort_datetime(p, datetime.min), reverse=True)
+        def _split_prediction_log(predictions):
+            today = datetime.now().date()
+            today_preds = []
+            played_preds = []
+            upcoming_preds = []
+
+            for pred in predictions:
+                scheduled_at = (pred.get("_schedule") or {}).get("scheduled_at")
+                if scheduled_at and scheduled_at.date() == today:
+                    today_preds.append(pred)
+                elif pred["_real_result"] or (scheduled_at and scheduled_at < datetime.now()):
+                    played_preds.append(pred)
+                else:
+                    upcoming_preds.append(pred)
+
+            return (
+                sorted(today_preds, key=lambda p: _sort_datetime(p, datetime.max)),
+                sorted(played_preds, key=lambda p: _sort_datetime(p, datetime.min), reverse=True),
+                sorted(upcoming_preds, key=lambda p: _sort_datetime(p, datetime.max)),
+            )
+
+        today_preds, played_preds, upcoming_preds = _split_prediction_log(visible_preds)
 
         def render_prediction_log_card(pred, key_prefix):
             pred_id = pred.get("id")
@@ -1261,54 +1447,72 @@ with tab_dashboard:
             scheduled_at = (pred.get("_schedule") or {}).get("scheduled_at")
             formatted_match_time = _format_match_datetime(scheduled_at)
 
-            col_info, col_delete = st.columns([10, 2])
-            
-            with col_info:
-                st.markdown(
-                    f"""
-                    <div style='background:rgba(255, 255, 255, 0.02); border:1px solid rgba(255, 255, 255, 0.05); padding:15px; border-radius:12px; margin-bottom:10px;'>
-                        <div style='display:flex; justify-content:space-between;'>
-                            <span style='font-weight:700; font-size:1.1rem; color:#ffffff;'>⚽ {escape(str(match_name))}</span>
-                            <span style='font-size:0.75rem; color:#8892b0;'>Partido: {formatted_match_time}</span>
-                        </div>
-                        <div style='margin-top:10px; display:flex; gap:20px; flex-wrap:wrap;'>
-                            <div>🗣️ <b>Tu Predicción:</b> <span style='font-size:1.2rem; color:#00E676;'>{pred_score}</span></div>
-                            <div>🏁 <b>Resultado real:</b> <span style='font-size:1.2rem; color:#ffffff;'>{real_score}</span><span style='font-size:0.78rem; color:#8892b0;'> ({escape(str(result_source))})</span></div>
-                            <div><span style='display:inline-block; padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; text-transform:uppercase; color:{evaluation["color"]}; background:{evaluation["background"]}; border:1px solid {evaluation["border"]};'>{evaluation["label"]} · {evaluation["points"]} pts</span></div>
-                            <div>🤖 <b>Model Poisson:</b> <span style='color:#00B0FF;'>{poisson_score}</span> ({poisson_prob*100:.1f}%)</div>
-                            <div>🕒 <b>Registrado:</b> {formatted_time}</div>
-                            <div>📈 <b>Probabilidades Poisson:</b> {escape(str(pred['home_team']))} {pred['poisson_home_win_prob']*100:.0f}% | Empate {pred['poisson_draw_prob']*100:.0f}% | {escape(str(pred['away_team']))} {pred['poisson_away_win_prob']*100:.0f}%</div>
-                        </div>
+            st.markdown(
+                f"""
+                <div class='prediction-log-card'>
+                    <div class='prediction-log-top'>
+                        <div class='prediction-match-name'>⚽ {escape(str(match_name))}</div>
+                        <div class='prediction-match-time'>{formatted_match_time}</div>
                     </div>
-                    """, 
-                    unsafe_allow_html=True
-                )
-            
-            with col_delete:
-                st.markdown("<div style='margin-top:15px;'></div>", unsafe_allow_html=True)
-                if st.button("❌ Eliminar", key=f"del_{key_prefix}_{pred_id}", help="Eliminar predicción del archivo"):
-                    if delete_prediction(pred_id):
-                        st.success("Predicción eliminada.")
-                        st.rerun()
+                    <div class='prediction-score-strip'>
+                        <div class='prediction-score-box'>
+                            <span class='prediction-score-label'>Tu apuesta</span>
+                            <span class='prediction-score-value is-pick'>{pred_score}</span>
+                        </div>
+                        <div class='prediction-score-box'>
+                            <span class='prediction-score-label'>Resultado</span>
+                            <span class='prediction-score-value'>{real_score}</span>
+                        </div>
+                        <span class='prediction-eval-badge' style='color:{evaluation["color"]}; background:{evaluation["background"]}; border:1px solid {evaluation["border"]};'>{evaluation["label"]} · {evaluation["points"]} pts</span>
+                    </div>
+                    <div class='prediction-meta-line'>
+                        <span><b>Fuente:</b> {escape(str(result_source))}</span>
+                        <span><b>Poisson:</b> {escape(str(poisson_score))} ({poisson_prob*100:.1f}%)</span>
+                        <span><b>Prob:</b> {escape(str(pred['home_team']))} {pred['poisson_home_win_prob']*100:.0f}% · E {pred['poisson_draw_prob']*100:.0f}% · {escape(str(pred['away_team']))} {pred['poisson_away_win_prob']*100:.0f}%</span>
+                        <span><b>Registro:</b> {formatted_time}</span>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
-        upcoming_col, played_col = st.columns(2)
-        with upcoming_col:
-            st.markdown(f"<h4>⏭️ Predicciones por venir ({len(upcoming_preds)})</h4>", unsafe_allow_html=True)
-            st.caption("Ordenadas por el partido más cercano primero.")
-            if upcoming_preds:
-                for pred in upcoming_preds:
-                    render_prediction_log_card(pred, "upcoming")
-            else:
-                st.info("No hay predicciones futuras para este filtro.")
+            st.markdown("<div class='prediction-delete-wrap'>", unsafe_allow_html=True)
+            if st.button("Eliminar", key=f"del_{key_prefix}_{pred_id}", help="Eliminar predicción del archivo"):
+                if delete_prediction(pred_id):
+                    st.success("Predicción eliminada.")
+                    st.rerun()
+            st.markdown("</div>", unsafe_allow_html=True)
 
-        with played_col:
-            st.markdown(f"<h4>✅ Ya jugados ({len(played_preds)})</h4>", unsafe_allow_html=True)
-            st.caption("Ordenadas desde el partido más reciente al más antiguo.")
-            if played_preds:
-                for pred in played_preds:
-                    render_prediction_log_card(pred, "played")
+        def render_prediction_section(title, caption, predictions, empty_message, key_prefix):
+            st.markdown(f"<div class='prediction-log-section'><h4>{title} ({len(predictions)})</h4></div>", unsafe_allow_html=True)
+            st.caption(caption)
+            if predictions:
+                for pred in predictions:
+                    render_prediction_log_card(pred, key_prefix)
             else:
-                st.info("No hay partidos jugados para este filtro.")
+                st.info(empty_message)
+
+        render_prediction_section(
+            "🔥 Hoy",
+            "Partidos programados para la fecha local de hoy, ordenados por hora.",
+            today_preds,
+            "No hay predicciones para partidos de hoy con este filtro.",
+            "today",
+        )
+        render_prediction_section(
+            "✅ Ya jugadas",
+            "Ordenadas desde el partido más reciente al más antiguo.",
+            played_preds,
+            "No hay partidos jugados para este filtro.",
+            "played",
+        )
+        render_prediction_section(
+            "⏭️ Próximas",
+            "Ordenadas por el partido más cercano primero.",
+            upcoming_preds,
+            "No hay predicciones futuras para este filtro.",
+            "upcoming",
+        )
                         
     st.markdown('</div>', unsafe_allow_html=True)
 
