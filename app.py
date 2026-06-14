@@ -29,8 +29,9 @@ from utils import (
     fetch_wc_matches_api,
     get_teams_from_matches,
     load_predictions,
-    save_prediction,
     delete_prediction,
+    find_prediction,
+    upsert_prediction,
     PREDICTIONS_FILE
 )
 from predictor import calculate_team_ratings, predict_match, SEED_RATINGS, DEFAULT_TOURNAMENT_AVG
@@ -789,7 +790,9 @@ with tab_predictor:
             # Filter home team to avoid playing against itself
             away_options = [t for t in playable_teams if t != home_team]
             away_team = st.selectbox("Equipo Visitante (Away):", away_options, index=0)
-            
+
+    existing_prediction = find_prediction(selected_match_id, home_team, away_team)
+
     st.markdown('</div>', unsafe_allow_html=True)
     
     # 2. Advanced rating controls are collapsed by default so mobile users see
@@ -962,20 +965,32 @@ with tab_predictor:
     # 3. Save prediction widget
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown('<h4>✍️ Ingresar Marcador Predicho</h4>', unsafe_allow_html=True)
-    
+
+    if existing_prediction:
+        st.info(
+            f"📌 Ya tienes una predicción guardada para este partido: "
+            f"**{home_team} {existing_prediction['predicted_goals_home']} - "
+            f"{existing_prediction['predicted_goals_away']} {away_team}**. "
+            f"Puedes modificarla abajo y guardar para actualizarla."
+        )
+
+    match_key = selected_match_id if selected_match_id else f"{home_team}_{away_team}"
+    default_goals_h = existing_prediction["predicted_goals_home"] if existing_prediction else 1
+    default_goals_a = existing_prediction["predicted_goals_away"] if existing_prediction else 1
+
     col_input_h, col_vs, col_input_a, col_save = st.columns([4, 1, 4, 3])
-    
+
     with col_input_h:
         predicted_goals_h = st.number_input(
-            f"Goles {home_team}:", 
-            min_value=0, max_value=20, value=1, step=1, key="pred_h"
+            f"Goles {home_team}:",
+            min_value=0, max_value=20, value=default_goals_h, step=1, key=f"pred_h_{match_key}"
         )
     with col_vs:
         st.markdown("<div style='text-align:center; font-size:2rem; font-weight:700; margin-top:15px;'>-</div>", unsafe_allow_html=True)
     with col_input_a:
         predicted_goals_a = st.number_input(
-            f"Goles {away_team}:", 
-            min_value=0, max_value=20, value=1, step=1, key="pred_a"
+            f"Goles {away_team}:",
+            min_value=0, max_value=20, value=default_goals_a, step=1, key=f"pred_a_{match_key}"
         )
         
     with col_save:
@@ -1001,12 +1016,15 @@ with tab_predictor:
                 "poisson_most_likely_score_prob": round(float(most_probable_score_prob), 4)
             }
             
-            # 1. Save prediction locally in JSON file
-            local_success = save_prediction(payload)
-            
+            # 1. Save prediction locally in JSON file (update if it already exists)
+            local_success, was_update = upsert_prediction(payload)
+
             if local_success:
                 st.balloons()
-                st.success(f"✅ ¡Predicción guardada exitosamente en `{PREDICTIONS_FILE}`!")
+                if was_update:
+                    st.success(f"✅ ¡Predicción actualizada exitosamente en `{PREDICTIONS_FILE}`!")
+                else:
+                    st.success(f"✅ ¡Predicción guardada exitosamente en `{PREDICTIONS_FILE}`!")
             else:
                 st.error("❌ Ocurrió un error al intentar guardar la predicción.")
                 

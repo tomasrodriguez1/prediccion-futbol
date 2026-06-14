@@ -225,6 +225,65 @@ def save_prediction(prediction_data):
         return False
 
 
+def find_prediction(match_id, home_team, away_team):
+    """
+    Busca una predicción existente para el partido dado.
+    - Si match_id es real (no None/"CUSTOM"): busca por match_id (como string).
+    - Si no: busca por (home_team, away_team) con match_id == "CUSTOM"/None.
+    Retorna el dict de la predicción o None.
+    """
+    predictions = load_predictions()
+    if match_id and match_id != "CUSTOM":
+        for p in predictions:
+            if str(p.get("match_id")) == str(match_id):
+                return p
+        return None
+    for p in predictions:
+        if (p.get("match_id") in (None, "CUSTOM")
+                and p.get("home_team") == home_team
+                and p.get("away_team") == away_team):
+            return p
+    return None
+
+
+def upsert_prediction(prediction_data):
+    """
+    Si ya existe una predicción para el mismo partido (mismo match_id, o misma
+    pareja de equipos cuando match_id es "CUSTOM"), la actualiza in-place
+    preservando su "id" original. Si no existe, hace append como una nueva.
+    Retorna (success, was_update).
+    """
+    predictions = load_predictions()
+
+    existing = find_prediction(
+        prediction_data.get("match_id"),
+        prediction_data.get("home_team"),
+        prediction_data.get("away_team"),
+    )
+
+    prediction_data["timestamp"] = datetime.now().isoformat()
+
+    if existing:
+        prediction_data["id"] = existing["id"]
+        for i, p in enumerate(predictions):
+            if p.get("id") == existing["id"]:
+                predictions[i] = prediction_data
+                break
+    else:
+        if "id" not in prediction_data:
+            prediction_data["id"] = datetime.now().strftime("%Y%m%d%H%M%S%f")
+        predictions.append(prediction_data)
+
+    try:
+        _ensure_predictions_file()
+        with open(PREDICTIONS_FILE, "w", encoding="utf-8") as f:
+            json.dump(predictions, f, indent=4, ensure_ascii=False)
+        return True, existing is not None
+    except IOError as e:
+        st.error(f"Failed to write prediction to file: {str(e)}")
+        return False, False
+
+
 def delete_prediction(prediction_id):
     """
     Deletes a prediction from the configured JSON file by ID.
