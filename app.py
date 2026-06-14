@@ -22,6 +22,7 @@ import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from html import escape
 
 # Import modules from local files
@@ -785,6 +786,19 @@ def _real_result_for_prediction(prediction, results_by_id, results_by_teams):
     return results_by_teams.get((home, away))
 
 
+_UTC = ZoneInfo("UTC")
+_CHILE_TZ = ZoneInfo("America/Santiago")
+
+
+def _to_chile_time(dt):
+    """Convierte un datetime naive (asumido UTC) o aware a hora de Chile."""
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=_UTC)
+    return dt.astimezone(_CHILE_TZ)
+
+
 def _parse_match_datetime(value):
     if not value:
         return None
@@ -834,7 +848,7 @@ def _schedule_for_prediction(prediction, schedule_by_id, schedule_by_teams):
 def _format_match_datetime(value):
     if not value:
         return "Fecha por confirmar"
-    return value.strftime("%d/%m/%Y %H:%M")
+    return _to_chile_time(value).strftime("%d/%m/%Y %H:%M")
 
 
 def _evaluate_prediction(prediction, real_result):
@@ -951,6 +965,7 @@ with tab_predictor:
                 date_str = m.get("utcDate", "")
                 if date_str:
                     dt = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
+                    dt = _to_chile_time(dt)
                     formatted_date = dt.strftime("%d %b - %H:%M")
                 else:
                     formatted_date = "TBD"
@@ -1438,7 +1453,7 @@ with tab_dashboard:
             if timestamp:
                 try:
                     dt_obj = datetime.fromisoformat(timestamp)
-                    formatted_time = dt_obj.strftime("%d/%m/%Y %H:%M")
+                    formatted_time = _to_chile_time(dt_obj).strftime("%d/%m/%Y %H:%M")
                 except ValueError:
                     formatted_time = timestamp
             else:
@@ -1616,6 +1631,7 @@ with tab_fixtures:
             date_str = m.get("utcDate", "")
             if date_str:
                 dt = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")
+                dt = _to_chile_time(dt)
                 formatted_date = dt.strftime("%d/%m/%Y %H:%M")
             else:
                 formatted_date = "Por definir"

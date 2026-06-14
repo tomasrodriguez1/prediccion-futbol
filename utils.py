@@ -15,7 +15,7 @@ load_dotenv()  # Load environment variables from .env file
 import json
 import requests
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import streamlit as st
 
 from team_names import normalize_team_name, is_placeholder_team
@@ -102,9 +102,22 @@ def load_official_wc2026_schedule():
         
         for idx, m in enumerate(matches_list):
             date_str = m.get("date", "")
-            # Clean up the time string (e.g. "13:00 UTC-6" -> "13:00")
-            time_str = m.get("time", "").split(" ")[0] if m.get("time") else "12:00"
-            utc_date = f"{date_str}T{time_str}:00Z" if date_str else "2026-06-11T12:00:00Z"
+            # Parse "13:00 UTC-6" into local time + offset, then convert to real UTC
+            time_field = m.get("time", "")
+            parts = time_field.split(" ")
+            time_str = parts[0] if parts else "12:00"
+            offset_str = parts[1] if len(parts) > 1 else "UTC+0"
+            try:
+                offset_hours = int(offset_str.replace("UTC", ""))
+            except ValueError:
+                offset_hours = 0
+
+            if date_str:
+                local_dt = datetime.strptime(f"{date_str}T{time_str}", "%Y-%m-%dT%H:%M")
+                utc_dt = local_dt - timedelta(hours=offset_hours)
+                utc_date = utc_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+            else:
+                utc_date = "2026-06-11T12:00:00Z"
             
             team1 = normalize_team_name(m.get("team1", "TBD"))
             team2 = normalize_team_name(m.get("team2", "TBD"))
