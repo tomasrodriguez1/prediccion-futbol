@@ -679,11 +679,22 @@ def _load_goldman_sachs_predictions():
     return lookup
 
 
+# football-data.org / schedule variants that aren't covered by normalize_team_name
+# but need to match the canonical names used in goldman_sachs_predictions.json.
+_GOLDMAN_SACHS_NAME_ALIASES = {
+    "Cabo Verde": "Cape Verde",
+    "Cabo Verde Islands": "Cape Verde",
+    "Cape Verde Islands": "Cape Verde",
+}
+
+
 def _goldman_sachs_prediction(home_team, away_team):
     """Return Goldman Sachs predicted score for a fixture, if available (group stage only)."""
     lookup = _load_goldman_sachs_predictions()
     home = normalize_team_name(home_team)
     away = normalize_team_name(away_team)
+    home = _GOLDMAN_SACHS_NAME_ALIASES.get(home, home)
+    away = _GOLDMAN_SACHS_NAME_ALIASES.get(away, away)
 
     match = lookup.get((home, away))
     if match:
