@@ -1,0 +1,655 @@
+{
+  "source": "Goldman Sachs Global Investment Research",
+  "title": "FIFA World Cup 2026 - Group Stage: Prediction as of 29 May 2026",
+  "as_of": "2026-05-29",
+  "matches": [
+    {
+      "group": "Group A",
+      "matchday": 1,
+      "date": "2026-06-11",
+      "home_team": "Mexico",
+      "away_team": "South Africa",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 0
+    },
+    {
+      "group": "Group A",
+      "matchday": 1,
+      "date": "2026-06-11",
+      "home_team": "South Korea",
+      "away_team": "Czech Republic",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group A",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "home_team": "Czech Republic",
+      "away_team": "South Africa",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group A",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "home_team": "Mexico",
+      "away_team": "South Korea",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group A",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "home_team": "Czech Republic",
+      "away_team": "Mexico",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group A",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "home_team": "South Africa",
+      "away_team": "South Korea",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group B",
+      "matchday": 1,
+      "date": "2026-06-12",
+      "home_team": "Canada",
+      "away_team": "Bosnia and Herzegovina",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group B",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "home_team": "Qatar",
+      "away_team": "Switzerland",
+      "predicted_home_goals": 0,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group B",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "home_team": "Switzerland",
+      "away_team": "Bosnia and Herzegovina",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group B",
+      "matchday": 2,
+      "date": "2026-06-18",
+      "home_team": "Canada",
+      "away_team": "Qatar",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group B",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "home_team": "Switzerland",
+      "away_team": "Canada",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group B",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "home_team": "Bosnia and Herzegovina",
+      "away_team": "Qatar",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group C",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "home_team": "Brazil",
+      "away_team": "Morocco",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group C",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "home_team": "Haiti",
+      "away_team": "Scotland",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group C",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "home_team": "Scotland",
+      "away_team": "Morocco",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group C",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "home_team": "Brazil",
+      "away_team": "Haiti",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group C",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "home_team": "Scotland",
+      "away_team": "Brazil",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group C",
+      "matchday": 3,
+      "date": "2026-06-24",
+      "home_team": "Morocco",
+      "away_team": "Haiti",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group D",
+      "matchday": 1,
+      "date": "2026-06-12",
+      "home_team": "USA",
+      "away_team": "Paraguay",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group D",
+      "matchday": 1,
+      "date": "2026-06-13",
+      "home_team": "Australia",
+      "away_team": "Turkey",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group D",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "home_team": "USA",
+      "away_team": "Australia",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group D",
+      "matchday": 2,
+      "date": "2026-06-19",
+      "home_team": "Turkey",
+      "away_team": "Paraguay",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group D",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "home_team": "Turkey",
+      "away_team": "USA",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group D",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "home_team": "Paraguay",
+      "away_team": "Australia",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group E",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "home_team": "Germany",
+      "away_team": "Curaçao",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group E",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "home_team": "Ivory Coast",
+      "away_team": "Ecuador",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group E",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "home_team": "Germany",
+      "away_team": "Ivory Coast",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group E",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "home_team": "Ecuador",
+      "away_team": "Curaçao",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group E",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "home_team": "Curaçao",
+      "away_team": "Ivory Coast",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group E",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "home_team": "Ecuador",
+      "away_team": "Germany",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group F",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "home_team": "Netherlands",
+      "away_team": "Japan",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group F",
+      "matchday": 1,
+      "date": "2026-06-14",
+      "home_team": "Sweden",
+      "away_team": "Tunisia",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group F",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "home_team": "Netherlands",
+      "away_team": "Sweden",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group F",
+      "matchday": 2,
+      "date": "2026-06-20",
+      "home_team": "Tunisia",
+      "away_team": "Japan",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group F",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "home_team": "Japan",
+      "away_team": "Sweden",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group F",
+      "matchday": 3,
+      "date": "2026-06-25",
+      "home_team": "Tunisia",
+      "away_team": "Netherlands",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group G",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "home_team": "Belgium",
+      "away_team": "Egypt",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group G",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "home_team": "Iran",
+      "away_team": "New Zealand",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group G",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "home_team": "Belgium",
+      "away_team": "Iran",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group G",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "home_team": "New Zealand",
+      "away_team": "Egypt",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group G",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "home_team": "Egypt",
+      "away_team": "Iran",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group G",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "home_team": "New Zealand",
+      "away_team": "Belgium",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group H",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "home_team": "Spain",
+      "away_team": "Cape Verde",
+      "predicted_home_goals": 3,
+      "predicted_away_goals": 0
+    },
+    {
+      "group": "Group H",
+      "matchday": 1,
+      "date": "2026-06-15",
+      "home_team": "Saudi Arabia",
+      "away_team": "Uruguay",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group H",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "home_team": "Spain",
+      "away_team": "Saudi Arabia",
+      "predicted_home_goals": 3,
+      "predicted_away_goals": 0
+    },
+    {
+      "group": "Group H",
+      "matchday": 2,
+      "date": "2026-06-21",
+      "home_team": "Uruguay",
+      "away_team": "Cape Verde",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group H",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "home_team": "Uruguay",
+      "away_team": "Spain",
+      "predicted_home_goals": 0,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group H",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "home_team": "Cape Verde",
+      "away_team": "Saudi Arabia",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group I",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "home_team": "France",
+      "away_team": "Senegal",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group I",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "home_team": "Iraq",
+      "away_team": "Norway",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group I",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "home_team": "France",
+      "away_team": "Iraq",
+      "predicted_home_goals": 3,
+      "predicted_away_goals": 0
+    },
+    {
+      "group": "Group I",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "home_team": "Norway",
+      "away_team": "Senegal",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group I",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "home_team": "Norway",
+      "away_team": "France",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group I",
+      "matchday": 3,
+      "date": "2026-06-26",
+      "home_team": "Senegal",
+      "away_team": "Iraq",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group J",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "home_team": "Argentina",
+      "away_team": "Algeria",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group J",
+      "matchday": 1,
+      "date": "2026-06-16",
+      "home_team": "Austria",
+      "away_team": "Jordan",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group J",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "home_team": "Argentina",
+      "away_team": "Austria",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group J",
+      "matchday": 2,
+      "date": "2026-06-22",
+      "home_team": "Jordan",
+      "away_team": "Algeria",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group J",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "home_team": "Algeria",
+      "away_team": "Austria",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group J",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "home_team": "Jordan",
+      "away_team": "Argentina",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group K",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "home_team": "Portugal",
+      "away_team": "DR Congo",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group K",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "home_team": "Uzbekistan",
+      "away_team": "Colombia",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group K",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "home_team": "Portugal",
+      "away_team": "Uzbekistan",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group K",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "home_team": "Colombia",
+      "away_team": "DR Congo",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group K",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "home_team": "Colombia",
+      "away_team": "Portugal",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group K",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "home_team": "DR Congo",
+      "away_team": "Uzbekistan",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group L",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "home_team": "England",
+      "away_team": "Croatia",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group L",
+      "matchday": 1,
+      "date": "2026-06-17",
+      "home_team": "Ghana",
+      "away_team": "Panama",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group L",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "home_team": "England",
+      "away_team": "Ghana",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    },
+    {
+      "group": "Group L",
+      "matchday": 2,
+      "date": "2026-06-23",
+      "home_team": "Panama",
+      "away_team": "Croatia",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group L",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "home_team": "Panama",
+      "away_team": "England",
+      "predicted_home_goals": 1,
+      "predicted_away_goals": 2
+    },
+    {
+      "group": "Group L",
+      "matchday": 3,
+      "date": "2026-06-27",
+      "home_team": "Croatia",
+      "away_team": "Ghana",
+      "predicted_home_goals": 2,
+      "predicted_away_goals": 1
+    }
+  ]
+}

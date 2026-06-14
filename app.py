@@ -10,6 +10,7 @@ It integrates:
 """
 
 import os
+import json
 from dotenv import load_dotenv
 
 load_dotenv()  # Load environment variables from .env file
@@ -483,6 +484,41 @@ if not playable_teams:
     playable_teams = ["Mexico", "Canada", "USA"] # Fallback if empty
 
 
+@st.cache_data
+def _load_goldman_sachs_predictions():
+    """Load Goldman Sachs group-stage score predictions (29 May 2026)."""
+    path = os.path.join(os.path.dirname(__file__), "data-worldcup", "goldman_sachs_predictions.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+    lookup = {}
+    for match in data.get("matches", []):
+        home = normalize_team_name(match["home_team"])
+        away = normalize_team_name(match["away_team"])
+        lookup[(home, away)] = match
+    return lookup
+
+
+def _goldman_sachs_prediction(home_team, away_team):
+    """Return Goldman Sachs predicted score for a fixture, if available (group stage only)."""
+    lookup = _load_goldman_sachs_predictions()
+    home = normalize_team_name(home_team)
+    away = normalize_team_name(away_team)
+
+    match = lookup.get((home, away))
+    if match:
+        return match["predicted_home_goals"], match["predicted_away_goals"], False
+
+    match = lookup.get((away, home))
+    if match:
+        return match["predicted_away_goals"], match["predicted_home_goals"], True
+
+    return None
+
+
 def _outcome_label(home_goals, away_goals):
     if home_goals > away_goals:
         return "H"
@@ -906,6 +942,21 @@ with tab_predictor:
             yaxis=dict(tickfont=dict(size=10))
         )
         st.plotly_chart(fig_heatmap, use_container_width=True, config=PLOTLY_CONFIG)
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    # 2.5 Goldman Sachs predicted score (group stage reference)
+    gs_prediction = _goldman_sachs_prediction(home_team, away_team)
+    if gs_prediction:
+        gs_home_goals, gs_away_goals, _ = gs_prediction
+        st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+        st.markdown('<h4>🏦 Predicción Goldman Sachs (29 may 2026)</h4>', unsafe_allow_html=True)
+        st.markdown(
+            f"<div style='text-align:center; font-size:1.8rem; font-weight:700;'>"
+            f"{home_team} {gs_home_goals} - {gs_away_goals} {away_team}</div>"
+            f"<div style='text-align:center; color:#8892b0; font-size:0.85rem; margin-top:4px;'>"
+            f"Fuente: Goldman Sachs Global Investment Research, fase de grupos</div>",
+            unsafe_allow_html=True,
+        )
         st.markdown('</div>', unsafe_allow_html=True)
 
     # 3. Save prediction widget
