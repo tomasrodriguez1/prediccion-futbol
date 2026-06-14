@@ -667,7 +667,7 @@ def _evaluate_prediction(prediction, real_result):
             **base,
             "category": "winner",
             "label": "Ganador acertado",
-            "points": 1,
+            "points": 2,
             "color": "#FFD54F",
             "background": "rgba(255, 213, 79, 0.12)",
             "border": "rgba(255, 213, 79, 0.35)",
@@ -1023,7 +1023,7 @@ with tab_dashboard:
         category_config = {
             "exact": {"label": "Marcadores exactos", "short": "Exacto", "points": 5, "color": "#00E676"},
             "diff": {"label": "Diferencias acertadas", "short": "Diferencia", "points": 3, "color": "#00B0FF"},
-            "winner": {"label": "Ganadores acertados", "short": "Ganador", "points": 1, "color": "#FFD54F"},
+            "winner": {"label": "Ganadores acertados", "short": "Ganador", "points": 2, "color": "#FFD54F"},
             "miss": {"label": "No acertadas", "short": "No acertada", "points": 0, "color": "#FF5252"},
             "pending": {"label": "Pendientes", "short": "Pendiente", "points": 0, "color": "#8892b0"},
         }
