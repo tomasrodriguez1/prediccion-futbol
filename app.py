@@ -1425,14 +1425,14 @@ with tab_dashboard:
             return default
 
         def _split_prediction_log(predictions):
-            today = datetime.now().date()
+            today = _to_chile_time(datetime.now()).date()
             today_preds = []
             played_preds = []
             upcoming_preds = []
 
             for pred in predictions:
                 scheduled_at = (pred.get("_schedule") or {}).get("scheduled_at")
-                if scheduled_at and scheduled_at.date() == today:
+                if scheduled_at and _to_chile_time(scheduled_at).date() == today:
                     today_preds.append(pred)
                 elif pred["_real_result"] or (scheduled_at and scheduled_at < datetime.now()):
                     played_preds.append(pred)
