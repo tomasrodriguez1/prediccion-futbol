@@ -342,6 +342,77 @@ def inject_premium_css():
                 max-width: 150px;
             }
 
+            .dash-kpi-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 10px;
+            }
+
+            .dash-kpi-card {
+                background: rgba(255, 255, 255, 0.025);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                border-radius: 10px;
+                padding: 12px;
+            }
+
+            .dash-kpi-label {
+                color: #8892b0;
+                font-size: 0.78rem;
+                font-weight: 600;
+                line-height: 1.2;
+            }
+
+            .dash-kpi-label-short {
+                display: none;
+            }
+
+            .dash-kpi-value {
+                color: #ffffff;
+                font-size: 1.6rem;
+                font-weight: 800;
+                line-height: 1.15;
+                margin-top: 4px;
+            }
+
+            .dash-cat-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            .dash-cat-card {
+                background: rgba(255, 255, 255, 0.025);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                border-radius: 12px;
+                min-height: 118px;
+                padding: 14px;
+            }
+
+            .dash-cat-label {
+                color: var(--cat-color, #8892b0);
+                font-size: 0.78rem;
+                font-weight: 700;
+                line-height: 1.15;
+                text-transform: uppercase;
+            }
+
+            .dash-cat-count {
+                color: #ffffff;
+                font-size: 2rem;
+                font-weight: 800;
+                line-height: 1.15;
+            }
+
+            .dash-cat-meta {
+                color: #8892b0;
+                font-size: 0.9rem;
+                line-height: 1.25;
+            }
+
+            .dash-section-gap {
+                height: 10px;
+            }
+
             @media (max-width: 768px) {
                 .main .block-container {
                     padding: 0.85rem 0.75rem 2rem;
@@ -516,6 +587,65 @@ def inject_premium_css():
                     border-radius: 10px;
                     border-color: rgba(255,255,255,0.08);
                     background: rgba(255,255,255,0.02);
+                }
+
+                .dash-title {
+                    font-size: 1.05rem !important;
+                    margin-bottom: 4px !important;
+                }
+
+                .dash-kpi-grid {
+                    gap: 6px;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .dash-kpi-card {
+                    border-radius: 8px;
+                    padding: 7px 8px;
+                }
+
+                .dash-kpi-label {
+                    font-size: 0.62rem;
+                    line-height: 1.1;
+                }
+
+                .dash-kpi-label-long {
+                    display: none;
+                }
+
+                .dash-kpi-label-short {
+                    display: inline;
+                }
+
+                .dash-kpi-value {
+                    font-size: 1.15rem;
+                    margin-top: 2px;
+                }
+
+                .dash-cat-grid {
+                    gap: 6px;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .dash-cat-card {
+                    min-height: unset;
+                    padding: 8px 9px;
+                }
+
+                .dash-cat-label {
+                    font-size: 0.65rem;
+                }
+
+                .dash-cat-count {
+                    font-size: 1.35rem;
+                }
+
+                .dash-cat-meta {
+                    font-size: 0.72rem;
+                }
+
+                .dash-section-gap {
+                    height: 6px;
                 }
             }
         </style>
@@ -1252,7 +1382,7 @@ with tab_predictor:
 # ------------------------------------------
 with tab_dashboard:
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown('<h3>📊 Dashboard de Rendimiento</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 class="dash-title">📊 Dashboard de Rendimiento</h3>', unsafe_allow_html=True)
     
     saved_preds = load_predictions()
     
@@ -1282,14 +1412,47 @@ with tab_dashboard:
         scored_count = sum(1 for p in finished_evaluations if p["_evaluation"]["points"] > 0)
         scored_pct = scored_count / evaluated_count * 100 if evaluated_count else 0
 
-        kpi_points, kpi_evaluated, kpi_avg, kpi_scored, kpi_pending = st.columns(5)
-        kpi_points.metric("Puntos totales", f"{total_points}")
-        kpi_evaluated.metric("Predicciones evaluadas", f"{evaluated_count}")
-        kpi_avg.metric("Puntos promedio", f"{avg_points:.2f}")
-        kpi_scored.metric("% con puntos", f"{scored_pct:.0f}%")
-        kpi_pending.metric("Pendientes", f"{pending_count}")
-
-        st.markdown("<br>", unsafe_allow_html=True)
+        kpi_html = (
+            '<div class="dash-kpi-grid">'
+            '<div class="dash-kpi-card">'
+            '<div class="dash-kpi-label">'
+            '<span class="dash-kpi-label-long">Puntos totales</span>'
+            '<span class="dash-kpi-label-short">Puntos</span>'
+            '</div>'
+            f'<div class="dash-kpi-value">{total_points}</div>'
+            '</div>'
+            '<div class="dash-kpi-card">'
+            '<div class="dash-kpi-label">'
+            '<span class="dash-kpi-label-long">Predicciones evaluadas</span>'
+            '<span class="dash-kpi-label-short">Evaluadas</span>'
+            '</div>'
+            f'<div class="dash-kpi-value">{evaluated_count}</div>'
+            '</div>'
+            '<div class="dash-kpi-card">'
+            '<div class="dash-kpi-label">'
+            '<span class="dash-kpi-label-long">Puntos promedio</span>'
+            '<span class="dash-kpi-label-short">Promedio</span>'
+            '</div>'
+            f'<div class="dash-kpi-value">{avg_points:.2f}</div>'
+            '</div>'
+            '<div class="dash-kpi-card">'
+            '<div class="dash-kpi-label">'
+            '<span class="dash-kpi-label-long">% con puntos</span>'
+            '<span class="dash-kpi-label-short">% puntos</span>'
+            '</div>'
+            f'<div class="dash-kpi-value">{scored_pct:.0f}%</div>'
+            '</div>'
+            '<div class="dash-kpi-card">'
+            '<div class="dash-kpi-label">'
+            '<span class="dash-kpi-label-long">Pendientes</span>'
+            '<span class="dash-kpi-label-short">Pendientes</span>'
+            '</div>'
+            f'<div class="dash-kpi-value">{pending_count}</div>'
+            '</div>'
+            '</div>'
+            '<div class="dash-section-gap"></div>'
+        )
+        st.markdown(kpi_html, unsafe_allow_html=True)
 
         category_config = {
             "exact": {"label": "Marcadores exactos", "short": "Exacto", "points": 5, "color": "#00E676"},
@@ -1299,25 +1462,25 @@ with tab_dashboard:
             "pending": {"label": "Pendientes", "short": "Pendiente", "points": 0, "color": "#8892b0"},
         }
 
-        cat_cols = st.columns(4)
-        for col, category in zip(cat_cols, ["exact", "diff", "winner", "miss"]):
+        cat_card_parts = []
+        for category in ["exact", "diff", "winner", "miss"]:
             category_preds = [p for p in evaluated_preds if p["_evaluation"]["category"] == category]
             count = len(category_preds)
             points = sum(p["_evaluation"]["points"] for p in category_preds)
             pct = count / evaluated_count * 100 if evaluated_count else 0
             config = category_config[category]
-            col.markdown(
-                f"""
-                <div style='background:rgba(255, 255, 255, 0.025); border:1px solid rgba(255, 255, 255, 0.06); border-radius:12px; padding:14px; min-height:118px;'>
-                    <div style='color:{config["color"]}; font-size:0.78rem; font-weight:700; text-transform:uppercase;'>{config["label"]}</div>
-                    <div style='font-size:2rem; font-weight:800; color:#ffffff; line-height:1.15;'>{count}</div>
-                    <div style='color:#8892b0; font-size:0.9rem;'>{points} pts · {pct:.0f}% evaluadas</div>
-                </div>
-                """,
-                unsafe_allow_html=True
+            cat_card_parts.append(
+                f'<div class="dash-cat-card" style="--cat-color:{config["color"]};">'
+                f'<div class="dash-cat-label">{config["label"]}</div>'
+                f'<div class="dash-cat-count">{count}</div>'
+                f'<div class="dash-cat-meta">{points} pts · {pct:.0f}% evaluadas</div>'
+                f'</div>'
             )
-
-        st.markdown("<br>", unsafe_allow_html=True)
+        cat_cards_html = (
+            f'<div class="dash-cat-grid">{"".join(cat_card_parts)}</div>'
+            '<div class="dash-section-gap"></div>'
+        )
+        st.markdown(cat_cards_html, unsafe_allow_html=True)
 
         chart_left, chart_right = st.columns([1, 1.45])
         category_rows = []
