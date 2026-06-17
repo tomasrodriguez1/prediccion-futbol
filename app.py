@@ -816,6 +816,10 @@ _GOLDMAN_SACHS_NAME_ALIASES = {
     "Cabo Verde": "Cape Verde",
     "Cabo Verde Islands": "Cape Verde",
     "Cape Verde Islands": "Cape Verde",
+    "Congo": "DR Congo",
+    "Congo DR": "DR Congo",
+    "Democratic Republic of Congo": "DR Congo",
+    "Congo, DR": "DR Congo",
 }
 
 
