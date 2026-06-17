@@ -344,7 +344,7 @@ def inject_premium_css():
 
             .dash-kpi-grid {
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: repeat(6, 1fr);
                 gap: 10px;
             }
 
@@ -1411,6 +1411,7 @@ with tab_dashboard:
         avg_points = total_points / evaluated_count if evaluated_count else 0
         scored_count = sum(1 for p in finished_evaluations if p["_evaluation"]["points"] > 0)
         scored_pct = scored_count / evaluated_count * 100 if evaluated_count else 0
+        possible_points_pct = total_points / (evaluated_count * 5) * 100 if evaluated_count else 0
 
         kpi_html = (
             '<div class="dash-kpi-grid">'
@@ -1441,6 +1442,13 @@ with tab_dashboard:
             '<span class="dash-kpi-label-short">% puntos</span>'
             '</div>'
             f'<div class="dash-kpi-value">{scored_pct:.0f}%</div>'
+            '</div>'
+            '<div class="dash-kpi-card">'
+            '<div class="dash-kpi-label">'
+            '<span class="dash-kpi-label-long">% puntos posibles</span>'
+            '<span class="dash-kpi-label-short">% posible</span>'
+            '</div>'
+            f'<div class="dash-kpi-value">{possible_points_pct:.0f}%</div>'
             '</div>'
             '<div class="dash-kpi-card">'
             '<div class="dash-kpi-label">'
