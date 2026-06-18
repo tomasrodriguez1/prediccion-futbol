@@ -18,6 +18,12 @@ INFERENCE_TEAM_NAME_MAP: dict[str, str] = {
     "Republic of Korea": "South Korea",
     "Korea DPR": "North Korea",
     "IR Iran": "Iran",
+    # football-data.org usa estos nombres; el calendario/modelos usan los canónicos.
+    "Congo DR": "DR Congo",
+    "Congo": "DR Congo",
+    "Democratic Republic of Congo": "DR Congo",
+    "Cape Verde Islands": "Cape Verde",
+    "Cabo Verde": "Cape Verde",
 }
 
 
