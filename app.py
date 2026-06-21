@@ -1684,14 +1684,35 @@ with tab_dashboard:
                     st.rerun()
             st.markdown("</div>", unsafe_allow_html=True)
 
-        def render_prediction_section(title, caption, predictions, empty_message, key_prefix):
-            st.markdown(f"<div class='prediction-log-section'><h4>{title} ({len(predictions)})</h4></div>", unsafe_allow_html=True)
-            st.caption(caption)
-            if predictions:
-                for pred in predictions:
-                    render_prediction_log_card(pred, key_prefix)
+        def render_prediction_section(
+            title,
+            caption,
+            predictions,
+            empty_message,
+            key_prefix,
+            *,
+            collapsible=False,
+            expanded=True,
+        ):
+            header = f"{title} ({len(predictions)})"
+
+            def _render_content():
+                st.caption(caption)
+                if predictions:
+                    for pred in predictions:
+                        render_prediction_log_card(pred, key_prefix)
+                else:
+                    st.info(empty_message)
+
+            if collapsible:
+                with st.expander(header, expanded=expanded):
+                    _render_content()
             else:
-                st.info(empty_message)
+                st.markdown(
+                    f"<div class='prediction-log-section'><h4>{header}</h4></div>",
+                    unsafe_allow_html=True,
+                )
+                _render_content()
 
         render_prediction_section(
             "🔥 Hoy",
@@ -1701,18 +1722,20 @@ with tab_dashboard:
             "today",
         )
         render_prediction_section(
-            "✅ Ya jugadas",
-            "Ordenadas desde el partido más reciente al más antiguo.",
-            played_preds,
-            "No hay partidos jugados para este filtro.",
-            "played",
-        )
-        render_prediction_section(
             "⏭️ Próximas",
             "Ordenadas por el partido más cercano primero.",
             upcoming_preds,
             "No hay predicciones futuras para este filtro.",
             "upcoming",
+        )
+        render_prediction_section(
+            "✅ Ya jugadas",
+            "Ordenadas desde el partido más reciente al más antiguo.",
+            played_preds,
+            "No hay partidos jugados para este filtro.",
+            "played",
+            collapsible=True,
+            expanded=False,
         )
                         
     st.markdown('</div>', unsafe_allow_html=True)
